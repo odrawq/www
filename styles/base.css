@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+span, a, p, h1, h2, button, select {
+    font-family: "base";
+    font-weight: bold;
+}
+
+span, a, p, input, button, select {
+    font-size: 17pt;
+}
+
+span, p {
+    color: rgb(255, 255, 255);
+}
+
+a, button {
+    transition: 200ms;
+    color: rgb(150, 150, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+}
+
+a:active, button:active {
+    opacity: 0.5;
+}
+
+a img {
+    margin-right: 10px;
+    transition: 200ms;
+}
+
+a img:hover {
+    transform: scale(0.88);
+}
+
+h1 {
+    font-size: 27pt;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 23pt;
+    color: rgb(255, 255, 255);
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+input {
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: rgb(130, 130, 245);
+    outline: none;
+    border: none;
+}
+
+select {
+    margin: 5px 0 10px 0;
+    padding: 8px;
+    background-color: rgb(130, 130, 245);
+    border: none;
+}
+
+#header {
+    padding: 15px;
+    background-color: rgb(20, 20, 40);
+}
+
+#header img {
+    margin: 10px;
+    width: 128px;
+    transition: 200ms;
+    vertical-align: middle;
+}
+
+#header img:hover {
+    transform: scale(0.92);
+}
+
+#header img:active {
+    opacity: 0.5;
+}
+
+#main {
+    flex-grow: 1;
+    background-color: rgb(130, 130, 245);
+    text-align: center;
+}
+
+#footer {
+    padding: 15px;
+    background-color: rgb(20, 20, 40);
+    text-align: center;
+}
+
+#footer img {
+    vertical-align: middle;
+}
+
+#menu {
+    margin: 25px 0 10px 15px;
+}
+
+.active-tab {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: overline;
+}
+
+.inactive-tab {
+    transition: 200ms;
+    color: rgb(120, 120, 120);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.inactive-tab:hover {
+    color: rgb(255, 255, 255);
+}
+
+.active-tab, .inactive-tab {
+    margin-right: 25px;
+}
+
+.content-wrapper {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(20, 20, 40);
+    animation: hello 800ms forwards;
+    text-align: start;
+    word-wrap: break-word;
+}
+
+@font-face {
+    src: url("../fonts/base.ttf");
+    font-family: "base";
+}
+
+@keyframes hello {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 725px) {
+    span, a, p, input, button, select {
+        font-size: 16pt;
+    }
+
+    h1 {
+        font-size: 26pt;
+    }
+
+    h2 {
+        font-size: 22pt;
+    }
+
+    a img {
+        width: 46px;
+    }
+
+    #header img {
+        width: 123px;
+    }
+
+    #footer img {
+        width: 47px;
+    }
+}
+
+@media (max-width: 668px) {
+    span, a, p, input, button, select {
+        font-size: 15pt;
+    }
+
+    h1 {
+        font-size: 25pt;
+    }
+
+    h2 {
+        font-size: 21pt;
+    }
+
+    a img {
+        width: 44px;
+    }
+
+    #header img {
+        width: 118px;
+    }
+
+    #footer img {
+        width: 44px;
+    }
+}
+
+@media (max-width: 631px) {
+    span, a, p, input, button, select {
+        font-size: 14pt;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    h2 {
+        font-size: 20pt;
+    }
+
+    a img {
+        width: 42px;
+    }
+
+    #header img {
+        width: 113px;
+    }
+
+    #footer img {
+        width: 41px;
+    }
+}
+
+@media (max-width: 391px) {
+    #header {
+        padding: 5px;
+    }
+
+    .content-wrapper {
+        padding: 15px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 351px) {
+    span, a, p, input, button, select {
+        font-size: 13pt;
+    }
+
+    h1 {
+        font-size: 23pt;
+    }
+
+    h2 {
+        font-size: 19pt;
+    }
+
+    a img {
+        width: 40px;
+    }
+
+    #header img {
+        width: 108px;
+    }
+
+    #footer img {
+        width: 38px;
+    }
+}

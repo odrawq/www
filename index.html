@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="images/favicon.png">
+    <title>Система аренды офисных помещений</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1><img data-tab="authentication-section" src="images/favicon.png" alt=""> Система аренды офисных помещений</h1>
+
+        <div id="menu">
+            <span data-tab="authentication-section" class="active-tab">Аутентификация</span>
+            <span data-tab="request-section" class="inactive-tab">Заявка</span>
+            <span data-tab="admin-panel-section" class="inactive-tab">Админ панель</span>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="authentication-section">
+            <div class="content-wrapper">
+                <h2>Регистрация</h2>
+                <br>
+
+                <form id="registration-form">
+                    <p for="fullname">ФИО</p>
+                    <input type="text" id="fullname" name="fullname" required>
+
+                    <p for="phone">Телефон</p>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <p for="email">Email</p>
+                    <input type="email" id="email" name="email" required>
+
+                    <p for="login">Логин</p>
+                    <input type="text" id="login" name="login" required>
+
+                    <p for="password">Пароль</p>
+                    <input type="password" id="password" name="password" required>
+
+                    <br>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+
+            <div class="content-wrapper">
+                <h2>Вход</h2>
+                <br>
+
+                <form id="login-form">
+                    <p for="login">Логин</p>
+                    <input type="text" id="login" name="login" required>
+
+                    <p for="password">Пароль</p>
+                    <input type="password" id="password" name="password" required>
+
+                    <br>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="request-section">
+            <div class="content-wrapper">
+                <form id="request-form">
+                    <p for="passportData">Паспортные данные:</p>
+                    <input type="text" id="passportData" name="passportData" required>
+
+                    <p for="officeType">Выберите тип помещения:</p>
+                    <select id="officeType" name="officeType" required>
+                        <option value="office">Офисное помещение</option>
+                        <option value="workspace">Рабочее пространство</option>
+                    </select>
+
+                    <p for="rentDuration">Срок аренды (в днях):</p>
+                    <input type="number" id="rentDuration" name="rentDuration" min="1" required>
+
+                    <br>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="admin-panel-section">
+            <div class="content-wrapper">
+                <p>Админ панель...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Информация о нас</p>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
