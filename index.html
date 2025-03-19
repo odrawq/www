@@ -14,7 +14,7 @@
 
         <div id="menu">
             <span data-tab="authentication-section" class="active-tab">Аутентификация</span>
-            <span data-tab="request-section" class="inactive-tab">Заявка</span>
+            <span data-tab="rent-section" class="inactive-tab">Заявка</span>
             <span data-tab="admin-panel-section" class="inactive-tab">Админ панель</span>
         </div>
     </div>
@@ -63,20 +63,29 @@
             </div>
         </div>
 
-        <div id="request-section">
+        <div id="rent-section">
             <div class="content-wrapper">
-                <form id="request-form">
-                    <p for="passportData">Паспортные данные:</p>
-                    <input type="text" id="passportData" name="passportData" required>
+                <form id="rent-form">
+                    <p for="fullname">ФИО</p>
+                    <input type="text" id="fullname" name="fullname" required>
 
-                    <p for="officeType">Выберите тип помещения:</p>
-                    <select id="officeType" name="officeType" required>
+                    <p for="birthdate">Дата рождения</p>
+                    <input type="date" id="birthdate" name="birthdate" required>
+
+                    <p for="phone">Номер телефона</p>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <p for="passport">Паспортные данные</p>
+                    <input type="text" id="passport" name="passport" required>
+
+                    <p for="room">Тип помещения</p>
+                    <select id="room" name="room" required>
                         <option value="office">Офисное помещение</option>
                         <option value="workspace">Рабочее пространство</option>
                     </select>
 
-                    <p for="rentDuration">Срок аренды (в днях):</p>
-                    <input type="number" id="rentDuration" name="rentDuration" min="1" required>
+                    <p for="duration">Срок аренды (в днях)</p>
+                    <input type="number" id="duration" name="duration" min="1" required>
 
                     <br>
                     <button type="submit">Отправить заявку</button>
